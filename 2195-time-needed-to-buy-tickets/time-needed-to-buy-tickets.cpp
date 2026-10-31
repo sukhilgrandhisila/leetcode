@@ -8,7 +8,7 @@ public:
             if (i == k) q.push({tickets[i],-1});
             else q.push({tickets[i],0});
         }
-        while (!q.empty() && true) {
+        while (true) {
             auto ele = q.front();
             q.pop();
             if (ele.first != 0) ele.first -= 1;
@@ -17,6 +17,5 @@ public:
             // q.push(ele);
             count+=1;
         }
-        return count + 1;
     }
 };
